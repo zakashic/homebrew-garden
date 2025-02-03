@@ -3,13 +3,13 @@ class Alist < Formula
     homepage "https://alist.nn.ci/"
     url "https://github.com/alist-org/alist/archive/v#{version}.tar.gz",
         verified: "github.com/alist-org/alist/"
-    version "3.41.0"
+    version "3.42.0"
     license "AGPL-3.0-only"
   
     if OS.mac?
       if Hardware::CPU.arm?
         url "https://github.com/alist-org/alist/releases/download/v#{version}/alist-darwin-arm64.tar.gz"
-        sha256 "d2a33d52e95d5b79e02736fe5adba75c8af784848a403508312c16992f983192"
+        sha256 "014694017ab429656ff0c2abac67cbc73c19191d42616d912304ad5addac94c0"
       elsif Hardware::CPU.intel?
         url "https://github.com/alist-org/alist/releases/download/v#{version}/alist-darwin-amd64.tar.gz"
         sha256 "b8e2957b1a5f8da61bf7b9c952f1c11cf2c40130b1c5facbc330e966de9a789b"
