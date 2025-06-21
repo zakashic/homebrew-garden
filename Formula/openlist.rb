@@ -1,8 +1,8 @@
 class OpenList < Formula
     desc "🗂️A file list program that supports multiple storages, powered by Gin and SolidJS, fork of AList."
     homepage "https://oplist.org"
-    url "https://github.com/OpenListTeam/OpenList/releases",
-        verified: "github.com/alist-org/alist/"
+    url "https://github.com/OpenListTeam/OpenList/archive/v#{version}.tar.gz",
+        verified: "github.com/OpenListTeam/OpenList"
     version "4.0.0"
     license "AGPL-3.0-only"
   
