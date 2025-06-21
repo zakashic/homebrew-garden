@@ -9,10 +9,10 @@ class OpenList < Formula
     if OS.mac?
       if Hardware::CPU.arm?
         url "https://github.com/OpenListTeam/OpenList/releases/download/v#{version}/openlist-darwin-arm64.tar.gz"
-        sha256 "be363afb2a2bc48267dd7b6dfbca4280fde3d296bdddb994da2410218cfbc936"
+        sha256 "4a70b0d50c5b99ef8d59467582aa6a98eccee98be464100dc349226620c4591b"
       elsif Hardware::CPU.intel?
         url "https://github.com/OpenListTeam/OpenList/releases/download/v#{version}/openlist-darwin-amd64.tar.gz"
-        sha256 "d072741af0b9735d2a32351d42f80c63f819577146d359782085591289341464"
+        sha256 "15f1a537ec596801cfcd6170a58c67dfc5d9675bbe2edbeb8a9d30d6f96ef70a"
       end
     end
   
