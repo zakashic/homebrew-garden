@@ -3,16 +3,16 @@ class OpenList < Formula
     homepage "https://oplist.org"
     url "https://github.com/OpenListTeam/OpenList/archive/v#{version}.tar.gz",
         verified: "github.com/OpenListTeam/OpenList"
-    version "4.0.8"
+    version "4.1.0"
     license "AGPL-3.0-only"
   
     if OS.mac?
       if Hardware::CPU.arm?
         url "https://github.com/OpenListTeam/OpenList/releases/download/v#{version}/openlist-darwin-arm64.tar.gz"
-        sha256 "20bc46929941f6a098ba1dc677864d5c20bde9a05f71669840fd21c51a8298a7"
+        sha256 "89421fb06ff5d36cdd04245b7f8f8ba896b30dd4a75f50a42f2a62ccedbd6170"
       elsif Hardware::CPU.intel?
         url "https://github.com/OpenListTeam/OpenList/releases/download/v#{version}/openlist-darwin-amd64.tar.gz"
-        sha256 "6b6bb7389887d5d7d0123d4dda1bce9d973a6dfd0de4ab4ddd3e5e5e0aa56695"
+        sha256 "f360fd29f0ed00ad24b4668dfaee2258dc8efe5cd5b8d03b3418d865bd279fd1"
       end
     end
   
