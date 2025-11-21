@@ -25,12 +25,19 @@ class OpenList < Formula
       bin.install "openlist"
     end
   
+    # def post_install
+    #   (var/"log/openlist").mkpath
+    #   (etc/"openlist").mkpath
+    #   prefix.install_symlink etc/"openlist" => opt_prefix/"data"
+    #   ln_s var/"log/openlist", opt_prefix/"data/log"
+    # end
+
     def post_install
-      (var/"log/openlist").mkpath
-      (etc/"openlist").mkpath
-      prefix.install_symlink etc/"openlist" => opt_prefix/"data"
-      ln_s var/"log/openlist", opt_prefix/"data/log"
-    end
+        (var/"log/openlist").mkpath
+        (etc/"openlist").mkpath
+        ln_sf etc/"openlist", prefix/"data"
+        ln_sf var/"log/openlist", prefix/"data/log"
+      end
   
     service do
       run [opt_bin/"openlist", "server"]
