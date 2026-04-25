@@ -21,7 +21,7 @@ class Openlist < Formula
   end
 
   service do
-    run [opt_bin/"openlist", "server", "--data", etc/"openlist"]
+    run [opt_bin/"openlist", "server", "--data", etc/"data/openlist"]
     keep_alive true
     working_dir etc/"openlist"
     log_path var/"log/openlist.log"
