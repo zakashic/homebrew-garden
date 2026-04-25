@@ -1,15 +1,14 @@
 class Openlist < Formula
   desc "New AList fork addressing anti-trust issues"
   homepage "https://doc.oplist.org/"
-  version "4.2.2"
-  license "AGPL-3.0-only"
+  version "4.2.1"
 
   if Hardware::CPU.arm?
-    url "https://github.com/OpenListTeam/OpenList/releases/download/v4.1.10/openlist-darwin-arm64.tar.gz"
-    sha256 "e6237ca1e68514b2b64967d9380114f5d02f1e7edde9297006ecf4c71080bd69"
+    url "https://github.com/OpenListTeam/OpenList/releases/download/v#{version}/openlist-darwin-arm64.tar.gz"
+    sha256 "fe277f79e01ef3eec4086d31672a9579f9e29dab34a125120618ac6c56edb029"
   else
-    url "https://github.com/OpenListTeam/OpenList/releases/download/v4.1.10/openlist-darwin-amd64.tar.gz"
-    sha256 "8dd42380d1d3103fc589a0b22d076e1c1d8ec6c0d233dd9b8b314a9be4d16f5b"
+    url "https://github.com/OpenListTeam/OpenList/releases/download/v#{version}/openlist-darwin-amd64.tar.gz"
+    sha256 "1038bcd19050b283fc889c34dac9a7a471ce083414d4acfa4dd4f96864579bdd"
   end
 
   def install
@@ -17,9 +16,9 @@ class Openlist < Formula
   end
 
   service do
-    run [opt_bin/"openlist", "server", "--data", var/"openlist"]
+    run [opt_bin/"openlist", "server", "--data", etc/"openlist"]
     keep_alive true
-    working_dir var/"openlist"
+    working_dir etc/"openlist"
     log_path var/"log/openlist.log"
     error_log_path var/"log/openlist.log"
   end
