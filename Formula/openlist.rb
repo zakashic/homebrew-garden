@@ -2,7 +2,6 @@ class Openlist < Formula
   desc "New AList fork addressing anti-trust issues"
   homepage "https://doc.oplist.org/"
   version "4.2.1"
-  license "AGPL-3.0-only"
 
   if Hardware::CPU.arm?
     url "https://github.com/OpenListTeam/OpenList/releases/download/v#{version}/openlist-darwin-arm64.tar.gz"
@@ -13,7 +12,12 @@ class Openlist < Formula
   end
 
   def install
-    bin.install "openlist"
+    libexec.install "openlist"
+
+    (bin/"openlist").write <<~SHELL
+      #!/bin/bash
+      cd "#{etc}/openlist" && exec "#{libexec}/openlist" "$@"
+    SHELL
   end
 
   def post_install
@@ -21,7 +25,7 @@ class Openlist < Formula
   end
 
   service do
-    run [opt_bin/"openlist", "server", "--data", etc/"data/openlist"]
+    run [libexec/"openlist", "server"]
     keep_alive true
     working_dir etc/"openlist"
     log_path var/"log/openlist.log"
