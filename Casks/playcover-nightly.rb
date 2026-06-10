@@ -17,7 +17,7 @@ cask "playcover-nightly" do
   auto_updates true
   conflicts_with cask: "playcover-community"
   depends_on arch: :arm64
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "PlayCover.app"
 
