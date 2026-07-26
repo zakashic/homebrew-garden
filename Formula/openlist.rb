@@ -1,14 +1,14 @@
 class Openlist < Formula
   desc "New AList fork addressing anti-trust issues"
   homepage "https://doc.oplist.org/"
-  version "4.2.2"
+  version "4.2.4"
 
   if Hardware::CPU.arm?
     url "https://github.com/OpenListTeam/OpenList/releases/download/v#{version}/openlist-darwin-arm64.tar.gz"
-    sha256 "19998745ff530db36c3a6f307b1c9c864d6db78d2084b35ffdec0f3ea524bad4"
+    sha256 "0e85d1c70aab2ba42f63fab407c7cffebc30d6cd573085e4b67365a3af6cb57f"
   else
     url "https://github.com/OpenListTeam/OpenList/releases/download/v#{version}/openlist-darwin-amd64.tar.gz"
-    sha256 "9d0fef008bea91dda99428895df92bb476386f90af4a06fe7c041dd13ca5b7a3"
+    sha256 "ead4d3230f8bb6e008e4475ec22590d1379dff3b9d8f25be7d57d0a04f6d3199"
   end
 
   def install
