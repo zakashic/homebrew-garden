@@ -2,13 +2,7 @@ cask "playcover-nightly" do
   version :latest
   sha256 :no_check
 
-  require "net/http"
-  require "uri"
-
-  nightly_url = "https://nightly.link/PlayCover/PlayCover/workflows/2.nightly_release/develop"
-  redirect = Net::HTTP.get_response(URI(nightly_url))["location"]
-
-  url "#{redirect}.zip"
+  url "https://nightly.link/PlayCover/PlayCover/workflows/2.nightly_release/develop.zip"
 
   name "PlayCover"
   desc "Sideload iOS apps and games"
