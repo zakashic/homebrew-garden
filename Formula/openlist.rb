@@ -17,8 +17,8 @@ class Openlist < Formula
     SHELL
   end
 
-  def post_install
-    (etc/"openlist").mkpath
+  post_install_steps do
+    mkdir_p "openlist", base: :etc
   end
 
   service do
