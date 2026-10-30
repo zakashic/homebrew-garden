@@ -5,7 +5,7 @@ class Openlist < Formula
 
   if Hardware::CPU.arm?
     url "https://github.com/OpenListTeam/OpenList/releases/download/v#{version}/openlist-darwin-arm64.tar.gz"
-    sha256 "2822e7d63855deacc7b816171ca14aaaeae59fec97c955d7d4258eedbfe4b881"
+    sha256 "dac3b46e96f18ec3a06824fbac660d3e23c8a96f0aa40bc2bf2c5fde5b1eaecf"
   end
 
   def install
